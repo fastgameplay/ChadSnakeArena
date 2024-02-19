@@ -20,11 +20,10 @@ namespace ChadSnakeArena.Game.Snake
             }
         }
         
-        [SerializeField] 
-        private SO_SnakeData _data;
+        [SerializeField] protected SO_SnakeData _data;
+        [SerializeField] protected int _id;
         private SnakePart _connectedPart;
         private SpriteRenderer _renderer;
-        private int _id;
 
         private void Awake() => UpdateRenderer();
         public void ChainMovement(Vector3 nextPosition, bool createPart) {
@@ -40,7 +39,7 @@ namespace ChadSnakeArena.Game.Snake
             transform.localPosition = nextPosition;
         }
 
-        private void DuplicatePart(Vector3 relativePosition){
+        protected void DuplicatePart(Vector3 relativePosition){
             SnakePart tail = Instantiate(_data.PartPrefab, transform.parent);
             _connectedPart = tail;
             tail.transform.localPosition = transform.localPosition + relativePosition;

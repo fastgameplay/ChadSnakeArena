@@ -13,19 +13,12 @@ namespace ChadSnakeArena.Game
         [SerializeField] private LineRenderer _lineRendererPrefab;
         [SerializeField] private SpriteRenderer _backGround;
 
-        // void Start()
-        // {
-        //     UpdateGrid();
-        // }
-        private void OnValidate() {
-            // UpdateGrid();
-        }
+        [ContextMenu("Update Grid")]
         public void UpdateGrid()
         {
             
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
+            while (transform.childCount > 0){
+                DestroyImmediate(transform.GetChild(0).gameObject);
             }
            
             Vector2 size = new Vector2(scale * rowCount, scale * columnCount);
