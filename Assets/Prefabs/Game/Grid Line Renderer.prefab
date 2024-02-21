@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8226294174705423243}
   - component: {fileID: 8368796348091195196}
   m_Layer: 5
-  m_Name: LineRenderer
+  m_Name: Grid Line Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
