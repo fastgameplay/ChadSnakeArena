@@ -20,7 +20,13 @@ namespace ChadSnakeArena.Game
         public void OnHomeBtn(){
             SceneManager.LoadScene(0);
         }
-        
+        public void PauseGame(bool state){
+            _gameOverTab.SetActive(!state);
+            _mainUITab.SetActive(!state);
+            _pauseTab.SetActive(state);
+            _settingsTab.SetActive(!state);
+            Time.timeScale = state ? 1f : 0f;
+        }
         private void OnGameOver(){
             _gameOverTab.SetActive(true);
             _mainUITab.SetActive(false);

@@ -16,6 +16,9 @@ namespace ChadSnakeArena.Game
         [field: SerializeField] public Color LineColor {get; private set;}
         [field: SerializeField] public LineRenderer LineRendererPrefab {get; private set;}
         [field: SerializeField] public GameObject FoodObjectPrefab {get; private set;}
+        
+        [field: Header("Game Settings")]
+        [field: SerializeField] public float ChallengeTime {get; private set;}
 
         public Vector3 GetWorldPosition(int x, int y) => new Vector3(RowCount / -2, ColumnCount / -2) + new Vector3(x * Scale, y * Scale);
         public Vector3 GetWorldPosition(Vector2Int pos) => GetWorldPosition(pos.x, pos.y);

@@ -20,3 +20,4 @@ MonoBehaviour:
   <LineColor>k__BackingField: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
   <LineRendererPrefab>k__BackingField: {fileID: 8368796348091195196, guid: 1159ddc00e3ca5c4ba3e6cc2be54fb8a, type: 3}
   <FoodObjectPrefab>k__BackingField: {fileID: 7274444842766721717, guid: b7757354a69645848a7deea85b01b03c, type: 3}
+  <ChallengeTime>k__BackingField: 15
