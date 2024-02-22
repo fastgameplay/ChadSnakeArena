@@ -23,7 +23,7 @@ namespace ChadSnakeArena.Game
             return GetWorldPosition(Random.Range(0,RowCount), Random.Range(0,ColumnCount));
         }
         public bool CheckOutsideOfBorder(Vector3 position){
-            if(position.x < RowCount / -2 || position.x > RowCount / 2) return true;
+            if (position.x < RowCount / -2 || position.x > RowCount / 2) return true;
             if (position.y < ColumnCount / -2 || position.y > ColumnCount / 2) return true;
             return false;
         }

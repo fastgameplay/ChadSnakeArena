@@ -26,8 +26,11 @@ MonoBehaviour:
       _type: 0
       _externalEvent: {fileID: 0}
     OnGameOver:
+      _type: 1
+      _externalEvent: {fileID: 11400000, guid: 87e3f3ad4ff809f419112399c8a30ff7, type: 2}
+    OnFoodGained:
       _type: 0
       _externalEvent: {fileID: 0}
-    OnFoodGained:
+    OnSnakePartAdded:
       _type: 0
       _externalEvent: {fileID: 0}

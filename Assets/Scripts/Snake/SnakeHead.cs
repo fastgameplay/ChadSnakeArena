@@ -58,6 +58,7 @@ namespace ChadSnakeArena.Game.Snake
         }
         private void OnSnakePartAdded(SnakePart part){
             _snakeParts.Add(part);
+            _data.Events.OnScoreChange.Invoke(_snakeParts.Count-1);
         }
         private void OnEnable() {
             _data.Events.OnSnakePartAdded += OnSnakePartAdded;

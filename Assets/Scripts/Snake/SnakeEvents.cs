@@ -10,8 +10,8 @@ namespace ChadSnakeArena.Game.Snake
         public EventReference<bool> OnPositionCheckResult;
 
         public EventReference OnGameOver;
-        public EventReference OnFoodGained;
         public EventReference<SnakePart> OnSnakePartAdded;
+        public EventReference<int> OnScoreChange;
 
 
 
