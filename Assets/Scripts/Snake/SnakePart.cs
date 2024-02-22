@@ -38,23 +38,21 @@ namespace ChadSnakeArena.Game.Snake
             }
             transform.localPosition = nextPosition;
         }
-
         protected void DuplicatePart(Vector3 relativePosition){
             SnakePart tail = Instantiate(_data.PartPrefab, transform.parent);
             _connectedPart = tail;
             tail.transform.localPosition = transform.localPosition + relativePosition;
             tail.ID = ID + 1;
+            _data.Events.OnSnakePartAdded.Invoke(tail);
         }
-
         private void UpdateRenderer(){
             if (_renderer == null) _renderer = GetComponent<SpriteRenderer>();
         }
-        
         private void OnPositionCheckRequest(Vector3 position){
             if(transform.localPosition != position) return;
             _data.Events.OnPositionCheckResult.Invoke(true);                
         }
-
+        public bool CheckLocation(Vector3 position) => transform.position == position;
         private void OnEnable() {
             _data.Events.OnPositionCheckRequest += OnPositionCheckRequest;
         }

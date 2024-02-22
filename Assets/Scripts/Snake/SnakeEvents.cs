@@ -11,6 +11,7 @@ namespace ChadSnakeArena.Game.Snake
 
         public EventReference OnGameOver;
         public EventReference OnFoodGained;
+        public EventReference<SnakePart> OnSnakePartAdded;
 
 
 
